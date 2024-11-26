@@ -1,0 +1,177 @@
+/* CSS Document */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%; /* Ensure the body and html take full height */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+    background-image: url("Images/background-edited.png");
+    background-size: cover;
+	font-family: "Chakra Petch", "Chakra Petch Light", "Chakra Petch Medium", "Chakra Petch SemiBold";
+    flex-direction: column; /* Stack content vertically */
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("Images/background-edited.png");
+    background-size: cover;
+    z-index: -1; /* Ensure it's below all other content */
+}
+
+.background-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21,52,56,0.50); /* Semi-translucent grey */
+    pointer-events: none; /* Avoid interaction */
+}
+
+header {
+	width: 100%;
+	padding: 20;
+	margin: 0;
+    justify-content: center;
+	position: sticky;
+	top: 0;
+	text-transform: uppercase;
+    background-color: #010a0b/*#333*/;
+	z-index: 1000; /* Ensure it stays above content */
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use Flexbox for alignment */
+    align-items: center; /* Vertically align items */
+    justify-content: space-between; /* Space out logo and nav items */
+    height: 80px; /* Fixed navbar height */
+    background-color: #010a0b;
+}
+
+.nav ul img {
+    height: 100%; /* Match the navbar height */
+    width: auto; /* Maintain aspect ratio */
+    margin-left: 10px; /* Add spacing to the left of the logo */
+}
+
+.nav ul .nav-items {
+    display: flex; /* Align buttons and icons in a row */
+    gap: 10px; /* Add spacing between items */
+    margin-right: 10px; /* Add spacing to the right */
+}
+
+.nav li {
+    list-style: none; /* Remove bullet points */
+    margin: auto; /* Reset margin */
+    padding: 0; /* Reset padding */
+}
+
+.nav li a {
+    display: flex; /* Use flex for icon and text alignment */
+    align-items: center; /* Center text and icons vertically */
+    color: #05545F;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0 10px; /* Adjust spacing between items */
+    text-decoration: none;
+    height: 80%; /* Match navbar height */
+    line-height: 60px; /* Center text vertically */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav li a img {
+    height: 40px; /* Set icon height to fit inside the navbar */
+    width: 40px; /* Match height for a square appearance */
+    margin-left: 8px; /* Add spacing between the icon and text */
+    object-fit: contain; /* Ensure image fits without distortion */
+    background-color: transparent; /* Ensure no background color */
+}
+
+.nav li a:hover {
+    /* background-color: #02191c;  Background changes for the link */
+	background-color: transparent ;
+    color: #7bb2a0; /* Text color changes aliceblue */
+}
+
+.nav li a:hover img {
+    filter: brightness(0) saturate(100%) invert(79%) sepia(2%) saturate(5188%) hue-rotate(113deg) brightness(90%) contrast(63%);
+}
+
+main {
+    flex: 1; /* Allow content to take up available space */
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+	z-index: 0; /* Ensure it stays below header */
+}
+
+.company {
+	display: flex;
+	align-items: center;
+	min-height: 960px;
+}
+
+.CAP {
+	background-color: rgba(5,84,95,0.75);
+	padding: 40px;
+	font-size: 24px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.CAP h1 {
+	font-size: 300%;
+	align-content: center;
+}
+
+.CAP_Picture {
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.CAP_Picture img {
+	max-width: 100%;
+	height: auto;
+}
+
+.game {
+	text-align: center;
+	background-color: black;
+	color: aliceblue;
+}
+
+.game p {
+    padding: 0px 20px; /* Remove any padding */
+}
+
+.game img {
+    width: 100%; /* Make the image span the full width of its container */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Remove any gaps below the image caused by inline-block behavior */
+    margin: 0; /* Remove any default margins */
+}
+
+
+footer {
+    width: 100%; /* Ensure footer takes full width */
+    text-align: center;
+    padding: 20px;
+    background-color: #010a0b;
+    color: aliceblue;
+    position: relative; /* Part of the normal page flow */
+}
