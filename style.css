@@ -166,6 +166,7 @@ main {
 }
 
 .CAP h1 {
+    font-weight: bold;
 	font-size: 300%;
 	align-content: center;
 }
