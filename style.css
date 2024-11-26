@@ -1,27 +1,32 @@
 /* CSS Document */
 @font-face {
     font-family: 'Chakra Petch';
-    src: url("Fonts/ChakraPetch-Regular.ttf") format('truetype');
+    src: url('Fonts/ChakraPetch-Regular.ttf') format('truetype');
+    font-weight: normal;
 }
 
 @font-face {
-    font-family: 'Chakra Petch Light';
-    src: url("Fonts/ChakraPetch-Light.ttf") format('truetype');
+    font-family: 'Chakra Petch';
+    src: url('Fonts/ChakraPetch-Light.ttf') format('truetype');
+    font-weight: 300;
 }
 
 @font-face {
-    font-family: 'Chakra Petch Medium';
-    src: url("Fonts/ChakraPetch-Medium.ttf") format('truetype');
+    font-family: 'Chakra Petch';
+    src: url('Fonts/ChakraPetch-Medium.ttf') format('truetype');
+    font-weight: 500;
 }
 
 @font-face {
-    font-family: 'Chakra Petch SemiBold';
-    src: url("Fonts/ChakraPetch-SemiBold.ttf") format('truetype');
+    font-family: 'Chakra Petch';
+    src: url('Fonts/ChakraPetch-SemiBold.ttf') format('truetype');
+    font-weight: 600;
 }
 
 @font-face {
-    font-family: 'Chakra Petch Bold';
-    src: url("Fonts/ChakraPetch-Bold.ttf") format('truetype');
+    font-family: 'Chakra Petch';
+    src: url('Fonts/ChakraPetch-Bold.ttf') format('truetype');
+    font-weight: bold;
 }
 
 * {
@@ -37,7 +42,8 @@ html, body {
 body {
     background-image: url("Images/background-edited.png");
     background-size: cover;
-	font-family: "Chakra Petch", "Chakra Petch Light", "Chakra Petch Medium", "Chakra Petch SemiBold", "Chakra Petch Bold";
+	font-family: 'Chakra Petch', sans-serif;
+	/*font-family: "Chakra Petch", "Chakra Petch Light", "Chakra Petch Medium", "Chakra Petch SemiBold", "Chakra Petch Bold";*/
     flex-direction: column; /* Stack content vertically */
 }
 
