@@ -15,12 +15,12 @@
 
 .particle {
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 7px;
+    height: 7px;
     background-color: #7bb2a0;
     border-radius: 50%;
     box-shadow: 0 0 10px #7bb2a0, 0 0 20px #7bb2a0, 0 0 30px #7bb2a0, 
-                0 0 40px #7bb2a0, 0 0 50px #7bb2a0, 0 0 60px #7bb2a0;
+                0 0 40px #7bb2a0;
     animation: shimmer 5s linear infinite;
 }
 
