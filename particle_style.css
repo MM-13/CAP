@@ -1,10 +1,10 @@
 /* CSS Document */
 @keyframes shimmer {
     0% {
-        transform: translateY(10vh);
-        opacity: 1;
+        transform: translateY(120vh);
+        opacity: 0;
     }
-    50% {
+    20% {
         opacity: 1;
     }
     100% {
@@ -15,7 +15,6 @@
 
 .particle {
     position: absolute;
-    bottom: 0;
     width: 10px;
     height: 10px;
     background-color: #7bb2a0;
