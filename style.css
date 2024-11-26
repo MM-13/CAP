@@ -70,71 +70,75 @@ body {
 }
 
 header {
-	width: 100%;
-	padding: 20;
-	margin: 0;
-    justify-content: center;
-	position: sticky;
-	top: 0;
-	text-transform: uppercase;
-    background-color: #010a0b/*#333*/;
-	z-index: 1000; /* Ensure it stays above content */
+    width: 100%;
+    padding: 20px 0;
+    margin: 0;
+    position: sticky;
+    top: 0;
+    background-color: #010a0b;
+    z-index: 1000;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    max-width: 100%; /* Adjust to your preferred width */
+    margin: 0 auto; /* Center the nav within the header */
+    padding: 0 20px; /* Add some padding if needed */
+}
+
+.nav .logo {
+    max-height: 100px;
+    width: auto;
+}
+
+.nav-items {
+    display: flex;
+    gap: 10px;
 }
 
 .nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Use Flexbox for alignment */
-    align-items: center; /* Vertically align items */
-    justify-content: space-between; /* Space out logo and nav items */
-    height: 80px; /* Fixed navbar height */
-    background-color: #010a0b;
-}
-
-.nav ul img {
-    height: 100%; /* Match the navbar height */
-    width: auto; /* Maintain aspect ratio */
-    margin-left: 10px; /* Add spacing to the left of the logo */
-}
-
-.nav ul .nav-items {
-    display: flex; /* Align buttons and icons in a row */
-    gap: 10px; /* Add spacing between items */
-    margin-right: 10px; /* Add spacing to the right */
+    display: flex;
+    align-items: center;
 }
 
 .nav li {
-    list-style: none; /* Remove bullet points */
-    margin: auto; /* Reset margin */
-    padding: 0; /* Reset padding */
+    list-style: none;
+    margin: auto;
+    padding: 0;
 }
 
 .nav li a {
-    display: flex; /* Use flex for icon and text alignment */
-    align-items: center; /* Center text and icons vertically */
+    display: flex;
+    align-items: center;
     color: #05545F;
     text-transform: uppercase;
     font-weight: bold;
-    padding: 0 10px; /* Adjust spacing between items */
+    padding: 0 10px;
     text-decoration: none;
-    height: 80%; /* Match navbar height */
-    line-height: 60px; /* Center text vertically */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    height: 100%;
+    line-height: 60px;
+    transition: background-color 0.3s ease;
 }
 
 .nav li a img {
-    height: 40px; /* Set icon height to fit inside the navbar */
-    width: 40px; /* Match height for a square appearance */
-    margin-left: 8px; /* Add spacing between the icon and text */
-    object-fit: contain; /* Ensure image fits without distortion */
-    background-color: transparent; /* Ensure no background color */
+    height: 40px;
+    width: 40px;
+    margin-left: 8px;
+    object-fit: contain;
+    background-color: transparent;
 }
 
 .nav li a:hover {
-    /* background-color: #02191c;  Background changes for the link */
-	background-color: transparent ;
-    color: #7bb2a0; /* Text color changes aliceblue */
+    background-color: transparent;
+    color: #7bb2a0;
 }
 
 .nav li a:hover img {
