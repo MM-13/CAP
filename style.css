@@ -35,16 +35,15 @@
 }
 
 html, body {
-    height: 100%; /* Ensure the body and html take full height */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    height: 100%;
+    overflow-x: hidden;
 }
 
 body {
     background-image: url("Images/background-edited.png");
     background-size: cover;
-	font-family: 'Chakra Petch', sans-serif;
-	/*font-family: "Chakra Petch", "Chakra Petch Light", "Chakra Petch Medium", "Chakra Petch SemiBold", "Chakra Petch Bold";*/
-    flex-direction: column; /* Stack content vertically */
+    font-family: 'Chakra Petch', sans-serif;
+    flex-direction: column;
 }
 
 .background-overlay {
@@ -55,7 +54,7 @@ body {
     height: 100%;
     background-image: url("Images/background-edited.png");
     background-size: cover;
-    z-index: -1; /* Ensure it's below all other content */
+    z-index: -1;
 }
 
 .background-overlay::before {
@@ -65,8 +64,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(21,52,56,0.50); /* Semi-translucent grey */
-    pointer-events: none; /* Avoid interaction */
+    background-color: rgba(21,52,56,0.50);
+    pointer-events: none;
 }
 
 header {
@@ -86,9 +85,9 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 60px;
-    max-width: 100%; /* Adjust to your preferred width */
-    margin: 0 auto; /* Center the nav within the header */
-    padding: 0 20px; /* Add some padding if needed */
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .nav .logo {
@@ -99,23 +98,15 @@ header {
 .nav-items {
     display: flex;
     gap: 10px;
-}
-
-.nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
-
-.nav li {
     list-style: none;
+}
+
+.nav-items li {
     margin: auto;
     padding: 0;
 }
 
-.nav li a {
+.nav-items li a {
     display: flex;
     align-items: center;
     color: #05545F;
@@ -128,7 +119,7 @@ header {
     transition: background-color 0.3s ease;
 }
 
-.nav li a img {
+.nav-items li a img {
     height: 40px;
     width: 40px;
     margin-left: 8px;
@@ -145,70 +136,120 @@ header {
     filter: brightness(0) saturate(100%) invert(79%) sepia(2%) saturate(5188%) hue-rotate(113deg) brightness(90%) contrast(63%);
 }
 
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: #05545F;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
 main {
-    flex: 1; /* Allow content to take up available space */
+    flex: 1;
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
-	z-index: 0; /* Ensure it stays below header */
+    z-index: 0;
 }
 
 .company {
-	display: flex;
-	align-items: center;
-	min-height: 960px;
+    display: flex;
+    align-items: center;
+    min-height: 960px;
 }
 
 .CAP {
-	background-color: rgba(5,84,95,0.75);
-	padding: 40px;
-	font-size: 24px;
+    background-color: rgba(5,84,95,0.75);
+    padding: 40px;
+    font-size: 24px;
     color: aliceblue;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .CAP h1 {
     font-weight: bold;
-	font-size: 300%;
-	align-content: center;
+    font-size: 300%;
+    align-content: center;
 }
 
 .CAP_Picture {
-	display: flex;
-	align-items: center;
-	margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .CAP_Picture img {
-	max-width: 100%;
-	height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .game {
-	text-align: center;
-	background-color: black;
-	color: aliceblue;
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
 }
 
 .game p {
-    padding: 0px 20px; /* Remove any padding */
+    padding: 0px 20px;
 }
 
 .game img {
-    width: 100%; /* Make the image span the full width of its container */
-    height: auto; /* Maintain the aspect ratio */
-    display: block; /* Remove any gaps below the image caused by inline-block behavior */
-    margin: 0; /* Remove any default margins */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
 }
 
-
 footer {
-    width: 100%; /* Ensure footer takes full width */
+    width: 100%;
     text-align: center;
     padding: 20px;
     background-color: #010a0b;
     color: aliceblue;
-    position: relative; /* Part of the normal page flow */
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-items {
+        display: none;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        background-color: #010a0b;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-items li {
+        width: 100%;
+    }
+
+    .nav-items li a {
+        padding: 10px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .nav-items.active {
+        display: flex;
+    }
 }
