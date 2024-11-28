@@ -197,10 +197,16 @@ main {
     height: auto;
 }
 
+.hpage-info {
+	display: flex;
+	height: 90vh;
+}
+
 .game {
     text-align: center;
     background-color: black;
     color: aliceblue;
+	width: 50%;
 }
 
 .game p {
@@ -212,6 +218,16 @@ main {
     height: auto;
     display: block;
     margin: 0;
+}
+
+.game-page .game img {
+    margin-top: -100px;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.company-info {
 }
 
 footer {
