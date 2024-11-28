@@ -152,7 +152,6 @@ header {
 }
 
 main {
-    flex: 2;
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
@@ -257,4 +256,13 @@ footer {
     .nav-items.active {
         display: flex;
     }
+	
+	.company { 
+		flex-direction: column-reverse; /* This ensures the CAP_Picture is above CAP */ 
+		justify-content: center; 
+	} 
+	.CAP, .CAP_Picture { 
+		width: 100%; /* Full width for mobile view */ 
+		text-align: center; 
+	}
 }
