@@ -199,7 +199,7 @@ main {
 
 .hpage-info {
 	display: flex;
-	height: 90vh;
+	height: 85vh;
 }
 
 .game {
@@ -228,6 +228,18 @@ main {
 }
 
 .company-info {
+}
+
+.email-link {
+    color: #7bb2a0; /* Match the color to your website's palette */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.email-link:hover {
+    color: #05545F; /* Change to another color on hover */
+    text-decoration: underline;
 }
 
 footer {
