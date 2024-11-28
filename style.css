@@ -188,6 +188,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+	padding: 3%;
 }
 
 .CAP_Picture img {
