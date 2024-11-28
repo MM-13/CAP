@@ -131,6 +131,7 @@ header {
 .nav li a:hover {
     background-color: transparent;
     color: #7bb2a0;
+	text-decoration: underline;
 }
 
 .nav li a:hover img {
