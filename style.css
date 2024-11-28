@@ -265,4 +265,9 @@ footer {
 		width: 100%; /* Full width for mobile view */ 
 		text-align: center; 
 	}
+	
+	.CAP_Picture {
+		width: 90%;
+		height: 90%;
+	}
 }
