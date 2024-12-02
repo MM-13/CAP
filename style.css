@@ -321,6 +321,36 @@ main {
 	padding: 20px;
 	padding-top: 0;
 	padding-left: 2.5%;
+	font-size: 1.2rem;
+}
+
+.game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.game-content, .game-video {
+    box-sizing: border-box;
+    padding: 1%;
+	border-radius: 25px;
+}
+
+.game-video {
+    flex: 0 1 70%; /* 60% of the viewport width */
+	padding-left: 0.5%;
+}
+
+.game-content {
+    flex: 0 1 30%; /* At least 40% of the viewport width */
+    height: auto; /* Make the height auto to fit the video height */
+	padding-right: 0.5%
+}
+
+.game-video video {
+    width: 100%;
+    height: auto;
 }
 
 .blog {
