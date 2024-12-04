@@ -1,15 +1,24 @@
-window.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     const arrow = document.getElementById("scroll-arrow");
+
+    function hideArrow() {
+        arrow.style.display = "none";
+    }
 
     // Detect scroll event
     window.addEventListener("scroll", function() {
         if (window.scrollY > 0) {
-            arrow.classList.add("hidden");
+            hideArrow();
         }
     });
 
-    // Detect touchpad use (e.g., for laptop users)
+    // Detect touch events (for touch devices)
     window.addEventListener("touchstart", function() {
-        arrow.classList.add("hidden");
+        hideArrow();
+    });
+
+    // Detect mouse wheel events
+    window.addEventListener("wheel", function() {
+        hideArrow();
     });
 });
